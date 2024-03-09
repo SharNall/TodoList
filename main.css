@@ -1,0 +1,65 @@
+header{
+    width: calc(100% - 1306px);
+    margin: auto;
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 7px;
+    
+   
+}
+.tasks{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+button{
+    cursor: pointer;
+    border-width:0.1px;
+    background-color: rgb(53, 213, 120);
+    color: rgb(255, 255, 255);
+}
+li {
+    list-style-type: none;
+    position: relative; 
+    list-style-type: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+    margin-bottom: 7px;
+}
+
+
+input[type="checkbox"]:checked + li::after {
+    transform: scaleX(1);
+}
